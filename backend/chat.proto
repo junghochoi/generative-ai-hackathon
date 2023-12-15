@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message ChatRequest {
+    string prompt = 1;
+    string model = 2;
+}
+
+message ChatResponse {
+    string text = 1;
+}
+
+service Chat {
+    rpc Chat(ChatRequest) returns (ChatResponse) {};
+}
